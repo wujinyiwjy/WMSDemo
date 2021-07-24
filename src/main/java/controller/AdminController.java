@@ -1,6 +1,6 @@
 package controller;
 
-import domain.Administator;
+import domain.Administrator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +15,8 @@ public class AdminController {
     
     @RequestMapping("/login")
     @ResponseBody
-    public void adminlogin(Administator administator)
+    public void adminLogin(Administrator administrator)
     {
-        adminService.adminLogin(administator);
+        adminService.adminLogin(administrator);
     }
 }

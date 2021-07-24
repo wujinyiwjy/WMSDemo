@@ -3,9 +3,17 @@ package domain;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class Administator {
+public class Administrator {
     private String adminname;
     private String password;
+    
+    public Administrator(String adminname, String password) {
+        this.adminname = adminname;
+        this.password = password;
+    }
+    
+    public Administrator() {
+    }
     
     public String getAdminName() {
         return adminname;
@@ -25,7 +33,7 @@ public class Administator {
     
     @Override
     public String toString() {
-        return "Administator{" +
+        return "Administrator{" +
                 "adminname='" + adminname + '\'' +
                 ", password='" + password + '\'' +
                 '}';
