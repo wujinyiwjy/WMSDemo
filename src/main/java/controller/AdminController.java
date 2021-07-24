@@ -12,7 +12,6 @@ import service.AdminService;
 public class AdminController {
     @Autowired
     private AdminService adminService;
-    
     @RequestMapping("/login")
     @ResponseBody
     public void adminLogin(Administrator administrator)

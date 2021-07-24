@@ -6,7 +6,7 @@
 </head>
 <style>
     body {
-        background-image: url("../img/阳光.jpg");
+        background-image: url("img/阳光.jpg");
     }
 
     .thick-black-border {
@@ -88,7 +88,7 @@
     </label></p>
 
     <label> 密&nbsp;&nbsp;码</label>
-    <input class="thick-green-border" type="password" id="password" value="password">
+    <input class="thick-green-border" type="assword" id="password" value="password">
     <h1><label>
         <input type="radio">我已同意该条款
     </label></h1>
