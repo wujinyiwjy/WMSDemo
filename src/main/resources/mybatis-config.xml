@@ -5,6 +5,11 @@
     <!-- 外部 properties 配置文件  -->
     <properties resource="db.properties"/>
 
+    <!--自定义别名-->
+    <typeAliases>
+        <typeAlias type="domain.Administrator" alias="administrator"/>
+    </typeAliases>
+
     <!--配置数据源-->
     <environments default="development-mysql">
         <environment id="development-mysql">
@@ -20,6 +25,6 @@
     <!-- mappers：将 SQL 映射文件注册到全局配置中 -->
     <mappers>
         <!-- 引用类路径下的 SQL 映射文件 -->
-        <mapper resource="mapper/XXXMapper.xml"/>
+        <mapper resource="mapper/*Mapper.xml"/>
     </mappers>
 </configuration>

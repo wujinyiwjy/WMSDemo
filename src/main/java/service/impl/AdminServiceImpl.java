@@ -1,6 +1,6 @@
 package service.impl;
 
-import domain.Administator;
+import domain.Administrator;
 import mapper.AdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class AdminServiceImpl implements AdminService {
     private AdminMapper adminMapper;
     
     @Override
-    public void adminLogin(Administator administator) {
-        adminMapper.adminLogin(administator);
+    public void adminLogin(Administrator administrator) {
+        adminMapper.adminLogin(administrator);
     }
 }

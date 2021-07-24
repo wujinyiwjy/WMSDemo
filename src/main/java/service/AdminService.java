@@ -1,10 +1,8 @@
 package service;
 
-import domain.Administator;
-import mapper.AdminMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import domain.Administrator;
 
 public interface AdminService {
-    public  void adminLogin(Administator administator);
+    public void adminLogin(Administrator administrator);
     
 }
