@@ -5,26 +5,4 @@
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfiguer"
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"></property>
-        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
-        <!-- 定义别名 -->
-        <property name="typeAliasesPackage" value="com.booway.pojo"></property>
-
-        <!-- 配置映射文件的位置，如果配置文件与mapper接口在同一个位置，可以不写 -->
-        <!-- <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"></property>  -->
-        <!-- <property name="mapperLocations">
-           <array>
-               <value>classpath:mybatis/mapper/User.xml</value>
-           </array>
-       </property> -->
-
-    </bean>
-
-    <!-- 将mybatis实现的接口注入到spring容器中 -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-        <property name="adminMapper" value="mapper.AdminMapper"></property>
-    </bean>
 </configuration>

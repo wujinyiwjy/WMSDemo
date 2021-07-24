@@ -10,6 +10,7 @@ import java.util.Properties;
 public class DruidDataSourceFactory implements DataSourceFactory {
     
     private Properties properties;
+    
     @Override
     public void setProperties(Properties properties) {
         this.properties = properties;
@@ -17,14 +18,14 @@ public class DruidDataSourceFactory implements DataSourceFactory {
     
     @Override
     public DataSource getDataSource() {
-        DruidDataSource druidDataSource= new DruidDataSource();
+        DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setUrl(this.properties.getProperty("url"));
         druidDataSource.setUsername(this.properties.getProperty("username"));
         druidDataSource.setPassword(this.properties.getProperty("password"));
         
-        try{
+        try {
             druidDataSource.init();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return druidDataSource;

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +6,7 @@
 </head>
 <style>
     body {
-        background-image: url(img/阳光.jpg);
+        background-image: url("../img/阳光.jpg");
     }
 
     .thick-black-border {
@@ -40,7 +39,7 @@
         border-height: 5px;
         border-radius: 5px;
         background-color: antiquewhite;
-        margin-bottom: auto);
+        margin-bottom: auto;
         border-style: solid;
     }
 
@@ -78,22 +77,18 @@
         border-style: solid;
 
     }
-    }
+
 </style>
 
 <body>
-<form align="center" class="thick-black-border">
+<form align="center" class="thick-black-border" method="post" action="${pageContext.request.contextPath}/admin/login">
     <p align="center">登录</p>
     <p> <label>用户名<input class="thick-green-border" type="text" id="adminname" value="adminname"
-                         placeholder="adminname">
+                         placeholder="请输入管理员账户名">
     </label></p>
 
     <label> 密&nbsp;&nbsp;码</label>
-    <input class="thick-green-border" type="password" id="password" value="password"
-    placeholder="password">
-    <h1><label>
-        <input type="radio" name="记住密码">记住密码
-    </label></h1>
+    <input class="thick-green-border" type="password" id="password" value="password">
     <h1><label>
         <input type="radio">我已同意该条款
     </label></h1>
